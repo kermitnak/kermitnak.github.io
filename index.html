@@ -1,18 +1,33 @@
-<div id="full_screen">
+<!-- index.html -->
 
-</div>
+<!DOCTYPE html>
+<html>
+  <body onload="randomize()">
+  </body>
+</html>
 
 <style>
-  #full_screen {
-    background-image: url("kermit/1.jpg") ;
+  body {
+    padding: 0;
+    margin: 0;
+
     height: 100% ;
     width: 100% ;
+    
+    /* background-image: url("kermit/1.jpg") ; */
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain
-  
-  
-  
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain
   }
 </style>
+
+<script>
+  function randomize() {
+    var body = document.getElementsByTagName('body')[0];
+    var kermit_num = 0 ; 
+    
+    kermit_num = Math.floor( 6 * Math.random() );
+    body.style.backgroundImage = "url(kermit/" + kermit_num + ".jpg)";
+  };
+</script>
